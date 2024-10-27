@@ -1,0 +1,97 @@
+.team{
+    padding-bottom: 1px;
+}
+
+.team-page {
+    background-color: #16444b;
+    background-image: url('/images/honeycomb.jpg');
+}
+
+.our-team h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 5em;
+    font-weight: 900;
+    color: var(--btn-clr);
+    font-family: var(--font-family-1);
+}
+
+.our-team p {
+    font-weight: 500;
+    font-size: 1.35em;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: var(--font-clr);
+    font-family: var(--font-family-2);
+}
+
+.team-container {
+    margin: 50px auto;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 500px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: var(--font-clr);
+    border-radius: 10px;
+}
+
+.name,
+.position,
+.year {
+    font-family: var(--font-family-2);
+    margin-top: 10px;
+}
+
+.photo {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+}
+
+@media (max-width: 990px) {
+    .team-container{
+        width: 85%;
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-team {
+        font-size: 1.5em;
+    }
+
+    .our-team p {
+        width: 80%;
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 500px);
+    }
+}
+
+@media (max-width: 490px) {
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 500px);
+    }
+}

@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* RISING ANIMATION */
+@keyframes rise {
+    0% {
+        display: none;
+        top: 100px;
+    }
+
+    20% {
+        display: flex;
+        flex-direction: column;
+        transition: display .1s;
+        top: 80px;
+    }
+
+    40% {
+        top: 60px;
+    }
+
+    60% {
+        top: 40px;
+    }
+
+    80% {
+        top: 20px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+
+/* ROOT */
+:root {
+    --font-clr: antiquewhite;
+    --font-family-1: 'Roboto Slab', serif;
+    --font-family-2: 'Signika Negative', sans-serif;
+    --nav-bg-clr: #031d21;
+    --nav-bg-login-clr: #d0edeb;
+    --btn-clr: #ac5130;
+}
+
+/* SCROLLBAR CSS */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(3, 45, 11);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.body {
+    font-size: 17px;
+    height: max-content;
+    user-select: none;
+}
+
+/* NAVBAR CSS STARTS HERE */
+
+.navbar {
+    background-color: var(--nav-bg-clr);
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav-logo {
+    height: 12vh;
+    display: flex;
+    filter: invert(1);
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo {
+    height: 12vh;
+}
+
+/* NAVBAR LINKS */
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--font-clr);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-family-1);
+}
+
+.link:hover {
+    transform: scale(107%);
+}
+
+.btn {
+    border: 3px solid var(--btn-clr);
+    border-radius: 10px;
+    padding: 5px 7px;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: var(--btn-clr);
+}
+
+
+/* HAMBURGER FOR RESPONSIVENESS */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* SIDE BAR CSS */
+
+.sidebar {
+    display: none;
+    position: absolute;
+    top: 11vh;
+    right: 0;
+    z-index: 999;
+    height: max-content;
+    font-size: 1.35rem;
+    font-weight: 500;
+    background-color: var(--nav-bg-clr);
+    backdrop-filter: blur(20px);
+}
+
+.sidebar-list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    margin: 20px 0 0 50px;
+}
+
+.sidebar-list li {
+    margin: 20px 0;
+}
+
+.sidebar-link {
+    font-family: var(--font-family-1);
+    color: var(--font-clr);
+    text-decoration: none;
+}
+
+
+/* MAIN CONTAINER CSS */
+
+.container {
+    position: relative;
+    font-size: 1rem;
+}
+
+/* GRADIENT BACKGROUND CSS */
+
+.bg-grad {
+    height: 50vh;
+    background-image: linear-gradient(#031d21, #031f22, #092c31, #16444b, #2b7a85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+
+.main-font {
+    margin: 40px 0 30px 0;
+    text-align: center;
+    color: var(--font-clr);
+    font-family: var(--font-family-1);
+    font-size: 6em;
+    font-weight: 900;
+    line-height: 110px;
+}
+
+.hline {
+    width: 50%;
+    margin: auto;
+}
+
+.spot {
+    font-size: 1.25em;
+    color: var(--btn-clr);
+}
+
+.desc {
+    width: 60%;
+    margin-bottom: 20px;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 1.25em;
+    font-family: var(--font-family-2);
+}
+
+/* BACKGROUND IMAGE CONTAINER CSS */
+
+.bg-img {
+    height: 100vh;
+    background-image: url('/images/mainbg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rise {
+    position: relative;
+    transition: all .4s;
+    animation: rise .8s ease 0s 1 forwards;
+}
+
+/* -----------MEDIA QUERIES FOR RESPONSIVE WEBSITE----------- */
+
+@media (max-width: 990px) {
+
+    .body,
+    .bg-grad {
+        font-size: 15px;
+    }
+
+    .bg-img {
+        background-position: center;
+    }
+
+    .exp-btn{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .body,
+    .bg-grad {
+        font-size: 10px;
+    }
+
+    .navbar {
+        height: 12vh;
+        justify-content: space-around;
+    }
+
+    .nav-logo {
+        height: 10vh;
+    }
+
+    .logo {
+        height: 10vh;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+        width: 300px;
+    }
+
+    .sidebar-list {
+        width: 70%;
+    }
+
+    .sidebar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bg-img {
+        background-position: center;
+    }
+
+    .main-font {
+        margin-top: 20px;
+        line-height: 70px;
+    }
+
+    .desc {
+        margin-bottom: 15px;
+        width: 85%;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 490px) {
+
+    .body,
+    .bg-grad {
+        font-size: 7px;
+    }
+
+    .bg-grad {
+        height: 40vh;
+    }
+
+    .sidebar {
+        width: 100vw;
+    }
+
+    .sidebar-list {
+        width: 80%;
+    }
+
+    .sidebar-list li {
+        margin: 15px 0;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .main-font {
+        margin-top: 50px;
+        line-height: 50px;
+    }
+
+    .desc {
+        font-size: .8rem;
+    }
+
+    .exp-btn, .exp-btn a{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .body,
+    .bg-grad {
+        font-size: 6px;
+    }
+
+    .main-font {
+        line-height: 40px;
+    }
+
+    .desc {
+        font-size: .8rem;
+    }
+
+    .sidebar {
+        font-size: 1rem;
+    }
+
+    .sidebar-list {
+        width: 70%;
+    }
+}

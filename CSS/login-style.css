@@ -1,0 +1,151 @@
+html {
+    font-size: 18px;
+}
+
+.navbar {
+    background-color: var(--nav-bg-login-clr);
+}
+
+.logo {
+    filter: invert(1);
+}
+
+.nav-link, .sidebar-link {
+    color: black;
+}
+
+.hamburger span{
+    background-color: black;
+}
+
+.sidebar{
+    background-color: var(--nav-bg-login-clr);
+}
+
+.loginandsignup {
+    min-height: 85vh;
+    background-image: url('/images/loginbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: rgba(240, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 5px black,
+    -2px -2px 5px black; */
+}
+
+.login-container {
+    display: none;
+}
+
+.signup-container {
+    display: flex;
+}
+
+.login-container.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-family-1);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid gray;
+    padding: 7px 10px;
+    font-size: 1.25rem;
+    margin: 10px 0px;
+    color: black;
+    font-family: var(--font-family-1);
+    transition: border .3s;
+}
+
+.forgot {
+    text-align: center;
+    margin: 10px 0;
+}
+
+a {
+    font-family: var(--font-family-1);
+    color: var(--btn-clr);
+    text-decoration: none;
+}
+
+.login-btn {
+    margin: 15px auto;
+    max-width: content;
+    border: 2px solid black;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 7px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    transition: all .3s;
+}
+
+.signup-form .btn {
+    margin: 20px 0;
+}
+
+.register {
+    font-family: var(--font-family-1);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-container {
+    display: none;
+}
+
+.forgot-container.active {
+    display: flex;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.form .login-btn:hover {
+    background-color: rgba(240, 255, 255, 0.5);
+}
+
+.form .login-btn:active {
+    transform: scale(97%);
+}
+
+@media (max-width: 768px) {
+    .loginandsignup {
+        min-height: 88vh;
+    }
+}
