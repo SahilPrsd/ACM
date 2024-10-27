@@ -141,19 +141,19 @@ html {
 
 .sidebar {
     display: none;
+    width: 100vw;
     position: absolute;
-    top: 11vh;
+    top: 12vh;
     right: 0;
     z-index: 999;
     height: max-content;
     font-size: 1.35rem;
     font-weight: 500;
     background-color: var(--nav-bg-clr);
-    backdrop-filter: blur(20px);
 }
 
 .sidebar-list {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -281,12 +281,12 @@ html {
 
     .sidebar {
         display: none;
-        width: 300px;
+        width: 100vw;
     }
 
-    .sidebar-list {
-        width: 70%;
-    }
+    /* .sidebar-list {
+        width: 100%;
+    } */
 
     .sidebar.active {
         display: flex;
