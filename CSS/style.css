@@ -144,7 +144,7 @@ html {
     width: 100vw;
     position: absolute;
     top: 12vh;
-    right: 0;
+    left: 0;
     z-index: 999;
     height: max-content;
     font-size: 1.35rem;
@@ -153,13 +153,13 @@ html {
 }
 
 .sidebar-list {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     list-style-type: none;
-    margin: 20px 0 0 50px;
+    /* margin: 20px 0 0 50px; */
 }
 
 .sidebar-list li {
@@ -284,9 +284,9 @@ html {
         width: 100vw;
     }
 
-    /* .sidebar-list {
+    .sidebar-list {
         width: 100%;
-    } */
+    }
 
     .sidebar.active {
         display: flex;
@@ -324,16 +324,12 @@ html {
         height: 40vh;
     }
 
-    .sidebar {
-        width: 100vw;
-    }
-
-    .sidebar-list {
-        width: 80%;
-    }
-
     .sidebar-list li {
         margin: 15px 0;
+    }
+
+    .sidebar-list:last-child{
+        margin-bottom: 15px;
     }
 
     .hamburger span {
@@ -373,9 +369,5 @@ html {
 
     .sidebar {
         font-size: 1rem;
-    }
-
-    .sidebar-list {
-        width: 70%;
     }
 }
