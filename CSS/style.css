@@ -237,12 +237,12 @@ html {
 
 /* BACKGROUND IMAGE CONTAINER CSS */
 
-.bg-img {
+/* .bg-img {
     height: 100vh;
-    background-image: url('/images/mainbg.svg');
+    background-image: url('images/mainbg.svg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .rise {
     position: relative;
