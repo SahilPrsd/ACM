@@ -1,4 +1,4 @@
-name: Deploy static site to Azure
+name: Deploy static website to Azure
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
